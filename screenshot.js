@@ -4,4 +4,7 @@
 
 function setScreenshotUrl(url) {
   document.getElementById('target').src = url;
+  setTimeout(function() {
+    alert("Click and drag anywhere to crop!");
+  }, 50);
 }

@@ -10,8 +10,7 @@
 var id = 100;
 
 // Listen for a click on the camera icon. On that click, take a screenshot.
-chrome.browserAction.onClicked.addListener(function() {
-
+chrome.browserAction.onClicked.addListener(function() {  
   chrome.tabs.captureVisibleTab(function(screenshotUrl) {
     var viewTabUrl = chrome.extension.getURL('screenshot.html?id=' + id++)
     var targetId = null;
@@ -20,8 +19,6 @@ chrome.browserAction.onClicked.addListener(function() {
       // We are waiting for the tab we opened to finish loading.
       // Check that the tab's id matches the tab we opened,
       // and that the tab is done loading.
-      console.log(tabId);
-      console.log(targetId);
       if (tabId != targetId || changedProps.status != "complete")
         return;
 
