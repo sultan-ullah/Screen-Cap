@@ -15,6 +15,6 @@ body, html {
 }
 
 #div {
-    border: 5px dotted rgb(218, 85, 85);
+    border: 5px dashed rgb(218, 85, 85);
     position: absolute;
 }
